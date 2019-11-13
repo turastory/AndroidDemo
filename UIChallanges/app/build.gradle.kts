@@ -62,6 +62,9 @@ dependencies {
     implementation(Dependencies.Rx.rxKotlin)
     implementation(Dependencies.Rx.rxBinding)
 
+    implementation(Dependencies.Dagger.dagger)
+    kapt(Dependencies.Dagger.daggerCompiler)
+
     testImplementation(Dependencies.junit)
     testImplementation(Dependencies.kotlinTest)
     testImplementation(Dependencies.kluentAndroid)

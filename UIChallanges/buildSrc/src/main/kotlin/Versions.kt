@@ -1,6 +1,8 @@
 object Versions {
     const val kotlin = "1.3.50"
     const val studio = "3.6.0-beta03"
+
+    const val dagger = "2.25.2"
 }
 
 object Dependencies {
@@ -35,4 +37,9 @@ object Dependencies {
     const val mockitoKotlin = "com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0"
     const val mockitoInline = "org.mockito:mockito-inline:3.0.0"
     const val liveDataTesting = "com.jraska.livedata:testing-ktx:1.1.0"
+
+    object Dagger {
+        const val dagger = "com.google.dagger:dagger:${Versions.dagger}"
+        const val daggerCompiler = "com.google.dagger:dagger-compiler:${Versions.dagger}"
+    }
 }
