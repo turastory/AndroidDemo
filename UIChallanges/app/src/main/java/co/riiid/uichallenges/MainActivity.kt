@@ -1,4 +1,4 @@
-package co.riiid.vida.uichallanges
+package co.riiid.uichallenges
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -7,8 +7,9 @@ import androidx.fragment.app.FragmentFactory
 import androidx.fragment.app.add
 import androidx.fragment.app.commitNow
 import co.riiid.vida.uichallanges.databinding.MainActivityBinding
-import co.riiid.vida.uichallanges.ui.main.BottomFragment
-import co.riiid.vida.uichallanges.ui.main.TopFragment
+import co.riiid.uichallenges.main.BottomFragment
+import co.riiid.uichallenges.main.TopFragment
+import co.riiid.vida.uichallanges.R.id
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,8 +23,8 @@ class MainActivity : AppCompatActivity() {
 
         if (savedInstanceState == null) {
             supportFragmentManager.commitNow {
-                add<TopFragment>(R.id.top_container)
-                add<BottomFragment>(R.id.bottom_container)
+                add<TopFragment>(id.top_container)
+                add<BottomFragment>(id.bottom_container)
             }
         }
     }
@@ -32,7 +33,9 @@ class MainActivity : AppCompatActivity() {
 class MyFragmentFactory : FragmentFactory() {
     override fun instantiate(classLoader: ClassLoader, className: String): Fragment {
         return when (className) {
-            TopFragment::class.java.name -> TopFragment(5)
+            TopFragment::class.java.name -> TopFragment(
+                5
+            )
             else -> super.instantiate(classLoader, className)
         }
     }

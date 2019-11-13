@@ -1,4 +1,4 @@
-package co.riiid.vida.uichallanges.ui.main
+package co.riiid.uichallenges.main
 
 import androidx.lifecycle.ViewModel
 
